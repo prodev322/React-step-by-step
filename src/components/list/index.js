@@ -1,3 +1,4 @@
+import React, { Fragment } from 'react';
 import ListItem from './listitem';
 
 const lists = [
@@ -23,15 +24,18 @@ const lists = [
     }
 ];
 
-export default function Accessiblility() {
+export default function List() {
     return (
-        <dl>
-            {lists.map(item => {
-                return (
-                    <ListItem content={item}/>
-                );
-            })}
-        </dl>
+        <Fragment>
+            <a href="/">Home</a>
+            <dl>
+                {lists.map(item => {
+                    return (
+                        <ListItem content={item}/>
+                    );
+                })}
+            </dl>
+        </Fragment>
     );
 };
 
