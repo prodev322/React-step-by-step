@@ -23,7 +23,7 @@ const lists = [
     }
 ];
 
-export function Accessiblility() {
+export default function Accessiblility() {
     return (
         <dl>
             {lists.map(item => {
@@ -35,6 +35,6 @@ export function Accessiblility() {
     );
 };
 
-export function Add(a, b) {
-    return (a + b);
-};
+// export function Add(a, b) {
+//     return (a + b);
+// };
