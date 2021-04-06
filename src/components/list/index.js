@@ -26,16 +26,23 @@ const lists = [
 
 export default function List() {
     return (
-        <Fragment>
-            <a href="/">Home</a>
-            <dl>
-                {lists.map(item => {
-                    return (
-                        <ListItem content={item}/>
-                    );
-                })}
-            </dl>
-        </Fragment>
+        <div className="container">
+            <div className="d-flex justify-content-center">
+                <div className="main-page">
+                    <Fragment>
+                        <a href="/">Home</a>
+                        <br />
+                        <dl>
+                            {lists.map(item => {
+                                return (
+                                    <ListItem content={item}/>
+                                );
+                            })}
+                        </dl>
+                    </Fragment>
+                </div>
+            </div>
+        </div>
     );
 };
 

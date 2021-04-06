@@ -6,19 +6,23 @@ import './App.css';
 //   console.log(math.Add(322, 330));
 // });
 
-const List = React.lazy(() => import("./components/list"));
+const Navbar = React.lazy(() => import("./components/navbar"));
 const Home = React.lazy(() => import("./components/home"));
+const List = React.lazy(() => import("./components/list"));
+const Context = React.lazy(() => import("./components/advanced_guides/context"));
 
 function App() {
   return (
-    <Router>
-      <Suspense fallback={<div>Loading.........</div>}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/List" component={List} />
-        </Switch>
-      </Suspense>
-    </Router>
+      <Router>
+        <Suspense fallback={<div>Loading.........</div>}>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/list" component={List} />
+            <Route path="/context" component={Context} />
+          </Switch>
+        </Suspense>
+      </Router>
   );
 }
 
